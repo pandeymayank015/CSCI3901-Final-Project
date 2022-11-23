@@ -1,0 +1,18 @@
+
+- You'll have some transformation of data, like computation of hub repair impacts.
+
+- Odd summary of data processed right away.  In this case, it's the parameters of methods.
+
+- Longer term data, don't forget about the log of repairs made and which employee made them.
+
+- Good to see that you're looking to the exception handling at this stage.  Given that none of the methods accept files as input, your methods shouldn't be throwing the FileNotFoundException or the SQLException out of their execution.  These involve design choices that your methods are making so your methods should be dealing with those exceptions.  If those exceptions trigger more meaningful exceptions to the caller of the project's methods then that's fine, but the outside user shouldn't know if you're using files or a database for storage.
+
+- You have more assumptions or constraints that you can identify to make your implementation simpler.
+
+- There are more strange cases to consider like
+  - answering queries when no hub is broken
+  - Looking for a repair path when there is just one hub broken within the maximum distance range
+  - Dealing with hubs that are tied with respect to their repair impacts
+
+Not a bad start to understanding the problem.  You could get into a few more of the algorithms or database queries that you'll need to start ironing out the key changes.
+
