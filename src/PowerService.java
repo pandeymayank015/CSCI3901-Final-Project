@@ -15,6 +15,15 @@ public class PowerService {
     }
 
     boolean addPostalCode ( String postalCode, int population, int area ) throws SQLException {
+        if(postalCode==null||postalCode.isEmpty()){
+            throw new IllegalArgumentException();
+        }
+        else if(population==0){
+            throw new IllegalArgumentException();
+        }
+        else if(area==0){
+            throw new IllegalArgumentException();
+        }
         try{
         statement = connect.createStatement();
         statement.execute("insert into AddPostalCode values('"+postalCode+"',"+ population+","+area+");");
@@ -27,6 +36,15 @@ public class PowerService {
     }
 
     boolean addDistributionHub ( String hubIdentifier, Point location, Set servicedAreas ) throws SQLException {
+        if(hubIdentifier==null||hubIdentifier.isEmpty()){
+            throw new IllegalArgumentException();
+        }
+        else if (location==null){
+            throw new IllegalArgumentException();
+        }
+        else if (servicedAreas.isEmpty()){
+            throw new IllegalArgumentException();
+        }
         try{statement = connect.createStatement();
         Iterator value = servicedAreas.iterator();
         statement.execute("insert into AddDistributionHub (HubIdentifier,Location) values('" + hubIdentifier + "','" + location.loc() + "');");
@@ -41,6 +59,9 @@ public class PowerService {
         }
     }
     void hubDamage (String hubIdentifier, float repairEstimate ) throws SQLException {
+        if (hubIdentifier==null || hubIdentifier.isEmpty()){
+            throw new IllegalArgumentException();
+        }
         try {
             statement = connect.createStatement();
             statement.execute("insert into HubDamage values('" + hubIdentifier + "'," + repairEstimate + ");");
@@ -56,6 +77,12 @@ public class PowerService {
         1. Employee_id
         2. hub ID
         3. repair time    */
+        if (hubIdentifier==null || hubIdentifier.isEmpty()){
+            throw new IllegalArgumentException();
+        }
+        else if (employeeId==null || employeeId.isEmpty()){
+            throw new IllegalArgumentException();
+        }
         try{
         statement = connect.createStatement();
         statement.execute("insert into HubRepair values('" + hubIdentifier + "','" + employeeId + "'," + repairTime + "," + inService + ");");
@@ -258,7 +285,11 @@ try{
     }
 
     List<HubImpact> repairPlan ( String startHub, int maxDistance, float maxTime ) throws SQLException {
-        Map<Integer,Integer> coordinates=new HashMap<>();
+
+        if(startHub==null||startHub.isEmpty()){
+            throw new IllegalArgumentException();
+        }
+        List<HubImpact> plan=new ArrayList<>();
 
         try {
             statement = connect.createStatement();
@@ -268,7 +299,7 @@ try{
         catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        return null;
+        return plan;
     }
 
     List<String> underservedPostalByPopulation ( int limit ) throws SQLException {

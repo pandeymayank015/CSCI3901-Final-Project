@@ -89,11 +89,11 @@ Point p7=new Point(5,2);
          ps.hubRepair("H8","E6",1,false);
          ps.hubRepair("H8","E3",1,true);
 
-         System.out.println("peopleOutOfService"+ps.peopleOutOfService());
+         System.out.println("peopleOutOfService: "+ps.peopleOutOfService());
          System.out.println(ps.mostDamagedPostalCodes(2).get(1).getPostalCode());
          System.out.println(ps.fixOrder(5).get(1).getHubId());
-         System.out.println("rateOfServiceRestoration"+ps.rateOfServiceRestoration(0.05f));
-         System.out.println("underservedPostalByPopulation"+ps.underservedPostalByPopulation(2));
-         System.out.println("underservedPostalByArea"+ps.underservedPostalByArea(3));
+         System.out.println("rateOfServiceRestoration: "+ps.rateOfServiceRestoration(0.05f));
+         System.out.println("underservedPostalByPopulation: "+ps.underservedPostalByPopulation(2));
+         System.out.println("underservedPostalByArea: "+ps.underservedPostalByArea(3));
     }
 }

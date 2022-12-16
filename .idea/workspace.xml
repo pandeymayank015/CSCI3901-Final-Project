@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0eccd011-2dff-430d-bf33-7b530ae59829" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_0_31.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PowerService.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PowerService.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PowerService/PowerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PowerService/PowerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PowerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PowerService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +33,11 @@
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
